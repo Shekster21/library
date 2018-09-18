@@ -14,3 +14,12 @@ class Catalogue(models.Model):
         return self.Title
 
 
+class UserInfo(models.Model):
+    AdmissionNumber = models.IntegerField(unique=True)
+    Name = models.CharField(max_length = 100)
+    Department = models.CharField(max_length = 50)
+    
+    def __str__(self):
+        return self.Name
+
+
