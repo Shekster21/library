@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from requesthandler import useraddition
 from django.views.decorators.csrf import csrf_exempt
+
+from .forms import NewForm
 # Create your views here.
 
 def index(request):
@@ -9,6 +11,8 @@ def index(request):
 
 @csrf_exempt
 def useradd(request):
-	word = useraddition(request)
-	print(word)
+	if request.method == "POST":
+		form = NewForm(request.POST)
+		if form.is_valid():
+			print("hello")
 	return HttpResponse()
