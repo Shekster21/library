@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from requesthandler import useraddition
+#from requesthandler import useraddition
 from django.views.decorators.csrf import csrf_exempt
 
 from .forms import NewForm
