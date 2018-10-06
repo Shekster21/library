@@ -7,7 +7,7 @@ from .forms import NewForm
 # Create your views here.
 
 def index(request):
-	return HttpResponse('Hello World!')
+	return render(request,'homepage.html')
 
 @csrf_exempt
 def useradd(request):
