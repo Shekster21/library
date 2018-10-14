@@ -3,10 +3,12 @@ from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib.auth import login,logout,authenticate
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
-
 from django.urls import reverse
 
-from .forms import NewForm
+#model imports
+
+from .models import userInfo
+
 # Create your views here.
 
 def index(request):
@@ -21,8 +23,8 @@ def user_login(request):
 
 		if user:
 			login(request,user)
-			name = user.
-			return render(request,'profileview.html',{''})
+			name = userInfo(user=user)
+			return render(request,'profileview.html',{'name':name.user.first_name})
 		else:
 			return HttpResponse("account does not exist.")
 

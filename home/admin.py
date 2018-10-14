@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Catalogue,UserInfo
+from .models import Catalogue,userInfo
 # Register your models here.
 
 admin.site.register(Catalogue)
-admin.site.register(UserInfo)
+admin.site.register(userInfo)

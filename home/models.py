@@ -15,13 +15,12 @@ class Catalogue(models.Model):
         return self.Title
 
 
-class UserInfo(models.Model):
+class userInfo(models.Model):
+    user = models.OneToOneField(User,on_delete=models.CASCADE)
 
-    user = models.OneToOneField(User)
+    semester = models.IntegerField(default=1)
+    batch = models.CharField(max_length=1,default='A')
 
-    Department = models.CharField(max_length = 50)
-    
     def __str__(self):
-        return self.user.name
-
+        return self.user.username
 
