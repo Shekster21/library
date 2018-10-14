@@ -19,7 +19,7 @@ from home import views
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls,name='admin'),
 	path('',views.index,name='index'),
-    re_path(r'^useradd/$',views.useradd,name = 'useradd'),
+    path(r'^login/$',views.user_login,name='user_login')
 ]

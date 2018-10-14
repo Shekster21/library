@@ -3,17 +3,14 @@ header{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color:#070707;
+    
     color:#c9270e;
 }
 
-body{
-    background-color: #070707;
-}
 .toplevel{
     display: flex;
     flex-direction: column;
-    background-color:#070707;
+    
    
 
 
@@ -26,13 +23,13 @@ main{
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
-    background-color:#635450;
+    
     border-radius: 10px;
 }
 
 footer{
     align-items: flex-end;
-    background-color:#070707;
+    
     color:#c9270e;
 }
 
